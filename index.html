@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jodo Anime</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f9dff'/%3E%3Cpath d='M24 18l24 14-24 14z' fill='white'/%3E%3C/svg%3E">
+<script>window.STATIC_MODE = true;</script>
+<meta name="theme-color" content="#0b0b0f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Jodo Anime">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header id="bar">
+  <a class="brand" href="#/home">▶ Jodo Anime</a>
+  <nav id="tabs">
+    <a class="tab focusable" data-tab="home" data-key="tab:home" href="#/home">首頁</a>
+    <a class="tab focusable" data-tab="browse" data-key="tab:browse" href="#/browse">片庫</a>
+    <a class="tab focusable" data-tab="fav" data-key="tab:fav" href="#/fav">收藏</a>
+    <a class="tab focusable" data-tab="history" data-key="tab:history" href="#/history">紀錄</a>
+  </nav>
+  <div class="divider"></div>
+  <div id="searchbox"><input id="q" class="focusable" data-key="search" type="search" placeholder="搜尋作品…" autocomplete="off"></div>
+  <span id="refreshing" hidden>⟳ 片單更新中…</span>
+  <span id="hintbar"></span>
+  <span id="devbadge" title="目前輸入來源">⌨</span>
+  <button class="cfgbtn focusable" id="cfgbtn" data-act="settings" data-key="cfg" title="設定">⚙</button>
+</header>
+
+<main id="main"></main>
+
+<div id="player" hidden>
+  <div class="ptop">
+    <button class="pbtn" data-act="p-back">◀ 返回</button>
+    <div id="pTitle"></div>
+    <button class="pbtn" data-act="p-prev" id="pPrev">⏮ 上一集</button>
+    <button class="pbtn" data-act="p-next" id="pNext">下一集 ⏭</button>
+    <button class="pbtn" data-act="p-full" title="全螢幕">⛶</button>
+  </div>
+  <div id="pStage">
+    <div id="yt"></div>
+    <div id="pMsg" hidden></div>
+    <div id="pNextUp" hidden></div>
+  </div>
+  <div id="pHint"></div>
+</div>
+
+<div id="cfgmask" hidden><div id="cfgpanel"></div></div>
+<div id="toast" hidden></div>
+<script src="local-api.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
